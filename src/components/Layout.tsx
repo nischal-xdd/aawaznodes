@@ -21,6 +21,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     if (path === '/admin/servers') return 'Fleet';
     if (path === '/settings') return 'Settings';
     if (path === '/api-keys') return 'API Keys';
+    if (path === '/panel') return 'Dashboard';
+    if (path === '/developer') return 'Developer';
     return '';
   };
 

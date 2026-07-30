@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Server, LayoutDashboard, Plus, LogOut, X, Settings, Key, User, Activity, Box, Search, Bell } from "lucide-react";
+import { Server, LayoutDashboard, Plus, LogOut, X, Settings, Key, User, Activity, Box, Search, Bell, Code } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import { useSettings } from "../context/SettingsContext";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,15 +11,17 @@ export function Sidebar({ onClose, isCollapsed, toggleCollapse }: { onClose?: ()
   
   const links = [
     { name: "Overview", path: "/", icon: <LayoutDashboard size={20} /> },
-    { name: "Nodes", path: "/nodes", icon: <Activity size={20} /> },
+    { name: "Dashboard", path: "/panel", icon: <Activity size={20} /> },
+    { name: "Nodes", path: "/nodes", icon: <Box size={20} /> },
     { name: "Servers", path: "/servers", icon: <Server size={20} /> },
   ];
   
   if (user?.role === "admin") {
     links.push({ name: "Deploy", path: "/servers/create", icon: <Plus size={20} /> });
-    links.push({ name: "Fleet", path: "/admin/servers", icon: <Box size={20} /> });
+    links.push({ name: "Fleet", path: "/admin/servers", icon: <Server size={20} /> });
     links.push({ name: "API Keys", path: "/api-keys", icon: <Key size={20} /> });
   }
+  links.push({ name: "Developer", path: "/developer", icon: <Code size={20} /> });
   links.push({ name: "Settings", path: "/settings", icon: <Settings size={20} /> });
 
   return (
