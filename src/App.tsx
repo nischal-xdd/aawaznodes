@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "r
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import ServerList from "./pages/ServerList";
 import CreateServer from "./pages/CreateServer";
@@ -55,7 +56,7 @@ const AnimatedRoutes = () => {
         <Routes location={location}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-
+          <Route path="/" element={<HomePage />} />
           <Route path="/panel" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
           <Route path="/nodes" element={<ProtectedRoute><Nodes /></ProtectedRoute>} />
           <Route path="/servers" element={<ProtectedRoute><ServerList /></ProtectedRoute>} />
