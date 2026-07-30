@@ -1,57 +1,47 @@
-# JTG Panel
+# Aawaz Nodes
 
-Made by Jishnu
+Free Minecraft server hosting panel. Create and manage your Minecraft servers with a modern control dashboard.
 
-## Quick Automated Setup (Recommended)
-
-Run the automated management script:
+## Quick Setup
 
 ```bash
 bash install.sh
 ```
 
-Menu Options:
-1. **Install Panel** (Installs Node.js, Docker, PM2, dependencies, builds & starts on port 6767)
-2. **Update Panel**
-3. **Create Admin User**
-4. **Restart Panel**
-5. **Exit**
-
----
-
 ## Manual Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/JishnuTheGamer/Jtg.git
-   cd Jtg
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/nischal-xdd/aawaznodes.git
+cd aawaznodes
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+# Install dependencies
+npm install
 
-3. Build the application:
-   ```bash
-   npm run build
-   ```
+# Build the application
+npm run build
 
-4. Create an admin user:
-   ```bash
-   npm run createuser
-   ```
+# Create an admin user
+npm run createuser
 
-5. Start the server (Port 6767):
-   ```bash
-   npm run start
-   ```
+# Start the server (Port 6767)
+npm start
+```
 
 ## Development
-
-To run the panel in development mode on port 3000:
 
 ```bash
 npm run dev
 ```
 
+## Features
+
+- One-click Minecraft server deployment (Paper, Fabric, Forge, Vanilla)
+- File manager with drag & drop upload
+- Real-time server console
+- Plugin & mod installer
+- SFTP support
+- Automated backups
+- Playit tunnel support
+- Sub-user management
+- Multi-node support

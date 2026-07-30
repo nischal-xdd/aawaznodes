@@ -1,5 +1,5 @@
 {
-  "name": "react-example",
+  "name": "aawaz-nodes",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -68,9 +68,8 @@
     "typescript": "~5.8.2",
     "vite": "^6.2.3"
   },
-  "description": "Made by Jishnu",
-  
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "description": "Aawaz Nodes - Free Minecraft Server Hosting Panel",
+  "keywords": ["minecraft", "hosting", "panel", "aawaz"],
+  "author": "Nischal Adhikari",
+  "license": "MIT"
 }

@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "jtg-panel",
+      name: "aawaz-nodes",
       script: "npm",
       args: "start",
       instances: 1,
