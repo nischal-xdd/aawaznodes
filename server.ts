@@ -84,7 +84,16 @@ async function startServer() {
 
   // Serve the landing page at root BEFORE the React SPA
   const landingPage = path.join(process.cwd(), "public", "home.html");
-  app.get("/", (req, res) => res.sendFile(landingPage));
+  app.get("/", (req, res) => {
+    if (fs.existsSync(landingPage)) {
+      res.sendFile(landingPage);
+    } else {
+      console.warn("Landing page not found at:", landingPage);
+      // Fallback: serve the React SPA index so the page isn't blank
+      const distPath = path.join(process.cwd(), "dist");
+      res.sendFile(path.join(distPath, "index.html"));
+    }
+  });
 
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
