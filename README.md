@@ -1,32 +1,57 @@
-# React + TypeScript + Vite
+# JTG Panel
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Made by Jishnu
 
-Currently, two official plugins are available:
+## Quick Automated Setup (Recommended)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Run the automated management script:
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+bash install.sh
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Menu Options:
+1. **Install Panel** (Installs Node.js, Docker, PM2, dependencies, builds & starts on port 6767)
+2. **Update Panel**
+3. **Create Admin User**
+4. **Restart Panel**
+5. **Exit**
+
+---
+
+## Manual Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/JishnuTheGamer/Jtg.git
+   cd Jtg
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Build the application:
+   ```bash
+   npm run build
+   ```
+
+4. Create an admin user:
+   ```bash
+   npm run createuser
+   ```
+
+5. Start the server (Port 6767):
+   ```bash
+   npm run start
+   ```
+
+## Development
+
+To run the panel in development mode on port 3000:
+
+```bash
+npm run dev
+```
+
